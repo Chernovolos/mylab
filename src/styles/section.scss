@@ -1,0 +1,38 @@
+.section {
+  position: relative;
+  padding: 35px;
+  text-align: center;
+
+  .section-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient( rgba(255,255,255,1) 19%, rgba(0,0,0,1) 59%);
+      & > img {
+        -o-object-fit: cover;
+        object-fit: cover;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+  }
+
+  .section-overlay {
+    position: absolute;
+    background-image: url("../assets/images/background/Overlay1.png");
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.5;
+  }
+
+    .section-body {
+      padding: 170px 0;
+    }
+
+}

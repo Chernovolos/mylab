@@ -1,0 +1,78 @@
+@mixin card-text($font-size-base, $letter-spacing, $text-align ,$text-transform) {
+  font-size: $font-size-base;
+  letter-spacing: $letter-spacing;
+  text-align: $text-align;
+  text-transform: $text-transform;
+}
+
+$font-family-base:"Hind",sans-serif;
+$color-title: #212121;
+$color-text: #727272;
+$hover-color: #ff9800;
+$color-link: #03a9f4;
+$hover-link: #ff9800;
+
+.card {
+  position: relative;
+  border: none;
+  border-radius: 0;
+
+  .card-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+
+    & > img {
+      -o-object-fit: cover;
+      object-fit: cover;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .card-body {
+    padding-top: 0;
+  }
+
+  .card-title {
+    @include card-text(18px, 2px, center, uppercase);
+    color: $color-title;
+    font-family: $font-family-base;
+    font-weight: bold;
+  }
+
+  .card-text {
+    @include card-text(16px, 0px, center, none);
+    color: $color-text;
+    line-height: 30px;
+    font-family: $font-family-base;
+    font-weight: 400;
+
+    &:hover {
+      color: $hover-color;
+    }
+  }
+
+  .card-link {
+    @include card-text(14px, 1px, center, uppercase);
+    line-height: 30px;
+    color: $color-link;
+    font-family: $font-family-base;
+    font-weight: bold;
+
+    &:hover {
+      color: $hover-link;
+    }
+
+    &:after {
+      content: "›";
+      margin-left: 5px;
+      font-size: 20px;
+    }
+  }
+
+}

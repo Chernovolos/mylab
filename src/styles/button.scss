@@ -1,16 +1,18 @@
+@mixin btn($font-size-base, $leter-spacing, $border-radius) {
+  font-size: $font-size-base;
+  letter-spacing: $leter-spacing;
+  border-radius: $border-radius;
+}
+
 $my-indicat-hover: #ff9800;
 $my-indicat-active: #03a9f4;
 
-.btn {
 
-  .btn-primary {
-
-    .btn-first {
-      font-size: 14px;
-      padding: 10px  30px;
-    }
+  .btn-first {
+    @include btn(14px, 2px, 0);
+    padding: 10px  30px;
   }
-}
+
 
 .carousel-indicators {
 

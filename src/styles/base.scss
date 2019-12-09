@@ -1,18 +1,19 @@
 $font-size-base: 16px;
 $color-base: #212121;
 $font-weight-base: 400;
+
 *, *::after, *::before {
   box-sizing: border-box;
 }
 
 html {
-  font-family: Hind;
-  color: $color-base;
-  font-size: $font-size-base;
-  font-weight: $font-weight-base;
-  line-height: 1.15;
 
   body {
+    font-family: 'Hind', sans-serif;
+    color: $color-base;
+    font-size: $font-size-base;
+    font-weight: $font-weight-base;
+    line-height: 1.15;
     margin: 0;
   }
 }

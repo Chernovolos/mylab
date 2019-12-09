@@ -1,6 +1,6 @@
 .section {
   position: relative;
-  padding: 35px;
+  padding: 35px 0;
   text-align: center;
 
   .section-background {
@@ -33,6 +33,11 @@
 
     .section-body {
       padding: 170px 0;
+    }
+
+    .section-description {
+      line-height: 1.8;
+      margin: 0 150px;
     }
 
 }
